@@ -15,7 +15,7 @@ namespace Inloggningssytem2
 
         public Admin()
         {
-            UserName = "admin";
+            UserName = "adminpenis";
             PassWord = "admin";
         }
         static void BytTextFärg()
