@@ -15,10 +15,10 @@ namespace Inloggningssytem2
 
         public Admin()
         {
-            UserName = "adminpenis";
+            UserName = "admin";
             PassWord = "admin";
         }
-        static void BytTextFärg()
+        public void BytTextFärg()
         {
             Random random = new Random();
             ConsoleColor[] colors = (ConsoleColor[])ConsoleColor.GetValues(typeof(ConsoleColor));
@@ -30,7 +30,7 @@ namespace Inloggningssytem2
             Console.ReadKey();
         }
 
-        static void BytKonsolTitel()
+        public void BytKonsolTitel()
         {
             Console.WriteLine("Ange ny titel för konsolfönstret: ");
             string nyTitel = Console.ReadLine();
