@@ -13,10 +13,10 @@ namespace Inloggningssytem2
         public string PassWord { get; set; }
 
 
-        public Program(string adminUsernNme, string adminPassWord)
+        public Admin()
         {
-            UserName = adminUsernNme;
-            PassWord = adminPassWord;
+            UserName = "admin";
+            PassWord = "admin";
         }
         static void BytTextFärg()
         {
