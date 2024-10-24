@@ -8,6 +8,8 @@
 
             while (true)
             {
+                TimeSpan AdminTime = new TimeSpan(600);
+
                 Console.WriteLine("1. Lägg till användare");
 
                 Console.WriteLine("2. Inställningar");
