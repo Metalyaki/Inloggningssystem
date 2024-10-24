@@ -2,28 +2,7 @@
 {
     internal class Program
     {
-        public string UserName { get; set; }
-        public string PassWord { get; set; }
-
-
-        public Program(string adminUsernNme, string adminPassWord)
-        {
-            UserName = adminUsernNme;
-            PassWord = adminPassWord;
-        }
-        static void BytTextFärg()
-        {
-            Random random = new Random();
-            ConsoleColor[] colors = (ConsoleColor[])ConsoleColor.GetValues(typeof(ConsoleColor));
-            ConsoleColor randomColor = colors[random.Next(colors.Length)];
-            Console.ForegroundColor = randomColor;
-            Console.WriteLine($"Textfärgen har ändrats till {randomColor}");
-            Console.ResetColor();
-            Console.WriteLine("Tryck på en valfri knapp för att fortsätta...");
-            Console.ReadKey();
-        }
-
-        static void BytKonsolTitel()
+        static void Main(string[] args)
         {
             string userInput;
 
@@ -33,7 +12,7 @@
             Console.WriteLine("Password: ");
             string password = Console.ReadLine();
 
-            if(username == admin.username && password == admin.password)
+            if (username == admin.username && password == admin.password)
             {
                 while (true)
                 {
@@ -68,7 +47,7 @@
 
             }
 
-            if(username == user.username && password == user.password)
+            if (username == user.username && password == user.password)
             {
                 while (true)
                 {
@@ -92,9 +71,12 @@
 
             }
 
+        }
+            
+
             
 
            
-        }
+        
     }
 }
