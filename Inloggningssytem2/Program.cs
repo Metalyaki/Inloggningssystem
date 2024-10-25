@@ -42,6 +42,8 @@
 
                         Console.Clear();
 
+                        Console.WriteLine("Meny");
+
                         Console.WriteLine("1. Lägg till användare");
 
                         Console.WriteLine("2. Inställningar");
@@ -81,17 +83,24 @@
                                 }
                                 break;
                             case "3":
+                                Console.WriteLine("Du loggas ut");
+                                Thread.Sleep(1000);
                                 menuAdmin = false;
                                 break;
 
                             case "4":
+                                Console.WriteLine("Programmet avslutas");
+                                Thread.Sleep(1000);
                                 System.Environment.Exit(0);
                                 break;
 
                             default:
                                 Console.WriteLine("Fel menyval");
+                                Thread.Sleep(1000);
                                 break;
                         }
+
+                        Thread.Sleep(500);
 
                     }
 
@@ -101,6 +110,7 @@
                 {
                     if (user.Namn() == username && user.Lösenord() == password)
                     {
+                        user loggedInUser = users.Find(user => user.Namn() == username && user.Lösenord() == password);
                         DateTime userDateTime = DateTime.Now;
                         TimeSpan duration = TimeSpan.FromMinutes(2);
 
@@ -118,6 +128,8 @@
 
                             Console.Clear();
 
+                            Console.WriteLine("Meny");
+
                             Console.WriteLine("1. Visa lösenord");
 
                             Console.WriteLine("2. Logga ut");
@@ -129,18 +141,26 @@
                             switch (userInput)
                             {
                                 case "1":
-                                    Console.WriteLine(user.Lösenord());
+                                    Console.WriteLine($"Ditt lösenord är: {loggedInUser.Lösenord()}");
+                                    Thread.Sleep(2000);
                                     break;
                                 case "2":
+                                    Console.WriteLine("Du loggas ut");
+                                    Thread.Sleep(1000);
                                     menuUser = false;
                                     break;
                                 case "3":
+                                    Console.WriteLine("Programmet avslutas");
+                                    Thread.Sleep(1000);
                                     System.Environment.Exit(0);
                                     break;
                                 default:
                                     Console.WriteLine("Fel menyval");
+                                    Thread.Sleep(1000);
                                     break;
                             }
+
+                            Thread.Sleep(500);
                         }
                     }
                 }
