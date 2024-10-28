@@ -25,7 +25,6 @@ namespace Inloggningssytem2
             ConsoleColor randomColor = colors[random.Next(colors.Length)];
             Console.ForegroundColor = randomColor;
             Console.WriteLine($"Textfärgen har ändrats till {randomColor}");
-            Console.ResetColor();
             Console.WriteLine("Tryck på en valfri knapp för att fortsätta...");
             Console.ReadKey();
         }
